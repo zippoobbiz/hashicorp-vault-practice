@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+
+  vault:
+    build:
+      context: ./vault
+      dockerfile: Dockerfile
+    ports:
+      - 8200:8200
+    volumes:
+      - ./vault/config:/vault/config
+      - ./vault/policies:/vault/policies
+      - ./vault/data:/vault/data
+      - ./vault/logs:/vault/logs
+    environment:
+      - VAULT_ADDR=http://127.0.0.1:8200
+    command: server -config=/vault/config/vault-config.hcl
+    cap_add:
+      - IPC_LOCK
+  statsd:
+    build: ./statsd
+    container_name: statsd
+    ports:
+    - 8125:8125/udp
+    - 8126:8126
+    - 8088:8088
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+    - 9090:9090

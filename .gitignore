@@ -1,0 +1,6 @@
+icinga
+workingscript
+vault/data
+vault/keys
+vault/logs
+vault-agent/credential

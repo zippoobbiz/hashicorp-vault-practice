@@ -1,0 +1,11 @@
+scrape_configs:
+  - job_name: 'vault'
+    metrics_path: "/v1/sys/metrics"
+    params:
+      format: ['prometheus']
+    # scheme: https
+    # tls_config:
+    #   ca_file: your_ca_here.pem
+    bearer_token: "s.zAwSWz94qM1ufsSqoCoARhJm"
+    static_configs:
+    - targets: ['vault:8200']

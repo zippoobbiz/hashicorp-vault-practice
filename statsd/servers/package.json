@@ -1,0 +1,22 @@
+{
+  "name": "http-server",
+  "version": "1.0.1",
+  "description": "StatsD interface ('server interface') that accepts metrics via HTTP PUTs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msiebuhr/statsd-http-interface"
+  },
+  "keywords": [
+    "statsd",
+    "server",
+    "interface",
+    "http",
+    "put"
+  ],
+  "author": "Morten Siebuhr",
+  "license": "ISC"
+}

@@ -1,0 +1,4 @@
+{{ with secret "kv/data/company-info" }}
+company: {{ .Data.data.company }}
+contact: {{ .Data.data.contact }}
+{{ end }}
