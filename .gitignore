@@ -3,4 +3,7 @@ workingscript
 vault/data
 vault/keys
 vault/logs
+vault/policies
 vault-agent/credential
+jenkins_home
+
