@@ -7,3 +7,7 @@ vault/policies
 vault-agent/credential
 jenkins_home
 
+.terraform
+*.tfstate
+*.tfstate.backup
+
