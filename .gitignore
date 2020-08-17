@@ -4,3 +4,6 @@ vault/data
 vault/keys
 vault/logs
 vault-agent/credential
+terraform.tfstate
+terraform.tfstate.backup
+.terraform
