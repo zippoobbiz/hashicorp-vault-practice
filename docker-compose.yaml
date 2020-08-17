@@ -31,3 +31,14 @@ services:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
     - 9090:9090
+  jenkins:
+    build:
+      context: ./jenkins
+      dockerfile: Dockerfile
+    volumes:
+      - ./jenkins/jenkins_home:/var/jenkins_home
+    ports:
+      - 8080:8080
+      - 50000:50000
+
+      

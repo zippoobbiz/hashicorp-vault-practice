@@ -3,7 +3,12 @@ workingscript
 vault/data
 vault/keys
 vault/logs
+vault/policies
+
 vault-agent/credential
-terraform.tfstate
-terraform.tfstate.backup
+
+jenkins_home
 .terraform
+*.tfstate
+*.tfstate.backup
+
