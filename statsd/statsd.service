@@ -1,0 +1,18 @@
+[Unit]
+Description=statsD deamon
+Documentation=https://github.com/statsd/statsd
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+User=icinga_user
+Group=icinga_user
+Restart=on-failure
+ExecStart=/bin/node /home/icinga_user/statsd/stats.js /home/icinga_user/statsd/exampleConfig.js
+ExecReload=/bin/kill -HUP $MAINPID
+KillSignal=SIGINT
+TimeoutStopSec=30s
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
