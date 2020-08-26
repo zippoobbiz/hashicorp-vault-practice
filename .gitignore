@@ -12,3 +12,4 @@ jenkins_home
 *.tfstate
 *.tfstate.backup
 
+data

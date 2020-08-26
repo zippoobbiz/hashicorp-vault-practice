@@ -1,7 +1,7 @@
 # base image
 FROM vault
 
-ENV VAULT_ADDR="http://172.24.0.2:8200"
+ENV VAULT_ADDR="http://vault:8200"
 
 # add the config, credential and template files
 COPY ./config/vault-config.hcl /vault/config/vault-config.hcl

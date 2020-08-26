@@ -1,7 +1,7 @@
 pid_file = "./pidfile"
 
 vault {
-        address = "http://172.24.0.2:8200"
+        address = "http://vault:8200"
 }
 
 auto_auth {
